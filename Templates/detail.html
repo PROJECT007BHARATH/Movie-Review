@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="color:white;">
+            <img src="{{movie.Poster.url}}" width="250px" height="350px"><br>
+                <label><b>Category : </b></label>
+                {{movie.category}}<br>
+
+                <label><b>Movie Name : </b></label>
+                {{movie.Movie_Name}}<br>
+
+                <label><b>Release Date : </b></label>
+                {{movie.Release_date}}<br>
+
+                <label><b>Trailer : </b></label>
+                <a href="{{movie.Trailer}}">{{movie.Trailer}}</a><br><br>
+
+                <h3><b>Description</b></h3>
+                {{movie.Description}}<br><br>
+
+                <h3><b>Cast</b></h3><br>
+                {{movie.Actors}}<br><br>
+
+                 <label><a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}" >UPDATE</a></label>
+                 <label><a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">DELETE</a></label>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

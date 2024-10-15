@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data" style="color:white;">
+
+{% csrf_token %}
+    <h1 >Movie Add</h1><br>
+    <label><b>Category : </b></label>
+    <input type="text" name="category" placeholder="Enter your Category"><br><br>
+    <label><b>Movie Name : </b></label>
+    <input type="text" name="Movie_Name" placeholder="Enter your Movie Name"><br><br>
+    <label><b>Release Date : </b></label>
+    <input type="date" name="Release_date" placeholder="Enter Release Date"><br><br>
+    <label><b>Trailer : </b></label>
+    <input type="text" name="Trailer" placeholder="Enter Trailer Link"><br><br>
+    <label><b>Description : </b></label>
+    <input type="text" name="Description" placeholder="Enter the Movie Description"><br><br>
+    <label><b>Actors : </b></label>
+    <input type="text" name="Actors" placeholder="Enter the Movie Actors"><br><br>
+    <label><b>Poster :</b></label>
+    <input type="file" name="Poster"><br><br>
+    <input type="submit" value="SUBMIT"><br><br>
+</form>
+{% endblock %}

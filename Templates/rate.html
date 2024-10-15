@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data" style="color:white;">
+
+{% csrf_token %}
+    <h1>Top rating</h1>
+     <label><b>Movie :</b></label>
+    <input type="text" name="post" >
+    <label><b>Author :</b></label>
+    <input type="text" name="author" placeholder="Enter the author name">
+    <label><b>Star :</b></label>
+    <input type="text" name="stars ">
+    <label><b>Author :</b></label>
+    <input type="text" name=" comment" placeholder="Enter your comment">
+    <input type="submit" value="SUBMIT">
+</form>
+{% endblock %}
